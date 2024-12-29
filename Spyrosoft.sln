@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyrosoft.CommonInfrastruct
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spyrosoft.Core", "Spyrosoft.Core\Spyrosoft.Core.csproj", "{29E9DE14-A972-4E15-8E46-21BEFD92596A}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AF701BE7-6F42-40B6-B542-F393BD7F1F12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{29E9DE14-A972-4E15-8E46-21BEFD92596A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29E9DE14-A972-4E15-8E46-21BEFD92596A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29E9DE14-A972-4E15-8E46-21BEFD92596A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF701BE7-6F42-40B6-B542-F393BD7F1F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF701BE7-6F42-40B6-B542-F393BD7F1F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF701BE7-6F42-40B6-B542-F393BD7F1F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF701BE7-6F42-40B6-B542-F393BD7F1F12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

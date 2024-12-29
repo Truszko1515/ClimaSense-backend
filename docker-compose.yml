@@ -1,0 +1,10 @@
+
+
+services:
+  spyrosoft.api:
+    image: ${DOCKER_REGISTRY-}spyrosoftapi
+    build:
+      context: .
+      dockerfile: Spyrosoft.Api/Dockerfile
+    ports:
+        - "5000:5000"
