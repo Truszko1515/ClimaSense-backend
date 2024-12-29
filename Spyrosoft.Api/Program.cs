@@ -30,14 +30,14 @@ namespace Spyrosoft.Api
 
             builder.Services.Configure<OpenWeatherHourlyVariables>(builder.Configuration.GetSection(nameof(OpenWeatherApiSettings))
                                                                                        .GetSection(nameof(OpenWeatherHourlyVariables)));
-
-
+            ///////
+            Console.WriteLine("Zarejestrowane serwisy IOptions<> i teraz tworznie httpClientow dla serwisow");
 
             // Registering HttpClients that are injected to services 
             builder.Services.AddHttpClient<IWeeklyWeatherForecastService, WeeklyWeatherForecastService>((ServiceProvider, httpClient) =>
             {
                 var settings = ServiceProvider.GetRequiredService<IOptions<OpenWeatherApiSettings>>().Value;
-
+                Console.WriteLine($"IOptions<OpenWeatherApiSettings> settings.BaseUrl = {settings.BaseUrl}");
                 httpClient.BaseAddress = new Uri($"{settings.BaseUrl}");
             });
             builder.Services.AddHttpClient<IWeeklyForecastSummaryService, WeeklyForecastSummaryService>((ServiceProvider, httpClient) =>
@@ -47,9 +47,11 @@ namespace Spyrosoft.Api
                 httpClient.BaseAddress = new Uri($"{settings.BaseUrl}");
             });
 
+            Console.WriteLine("Dzialajacye Httpclienty dla serwisow");
             // Used Scrutor libray
             builder.Services.Decorate<IWeeklyWeatherForecastService, CachedWeeklyWeatherForecastService>();
 
+            
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("LocalHostPolicy",
@@ -63,7 +65,7 @@ namespace Spyrosoft.Api
                               .AllowAnyHeader();
                     });
             });
-
+            Console.WriteLine("dzialajacy cors, builder.Build()");
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

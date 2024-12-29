@@ -23,9 +23,12 @@ namespace Spyrosoft.Api.Controllers
         [HttpGet("weekly-forecast")]
         public async Task<IActionResult> GetWeeklyForecast([FromQuery] WeatherForecastRequest request)
         {
+            await Console.Out.WriteLineAsync($"Validation eror: lon - {request.Longitude} lat - {request.Latitude}");
+            
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState); 
+                return BadRequest(ModelState);
+                
             }
 
             var result = await _weeklyWeatherForecastService.GetForecast(request.Latitude, request.Longitude);
