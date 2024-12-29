@@ -59,9 +59,8 @@ namespace Spyrosoft.Api
                     {
                         policy
                               .SetIsOriginAllowedToAllowWildcardSubdomains()
-                              .WithOrigins("https://localhost:4200", "http://localhost:4200", "http://localhost:3000")
+                              .WithOrigins("https://localhost:4200", "http://localhost:4200", "http://localhost:3000", "https://spyrosoft-frontend.onrender.com")
                               .AllowAnyMethod()
-                              .AllowAnyHeader()
                               .AllowAnyHeader();
                     });
             });
