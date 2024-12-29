@@ -10,6 +10,10 @@ Ten projekt to aplikacja ASP.NET Core API służąca do generowania tygodniowej 
   - Minimalne i maksymalne temperatury.
   - Szacowany czas nasłonecznienia.
   - Szacowana ilość energii generowanej w kWh.
+- **Podsumowanie nadchodzącego tygodnia**:
+-  Minimalna i maksymalna temperatura w nadchodzącym tygodniu
+-  Średnie ciśnienie na poziomie morza oraz na powierzchni danej lokalizacji
+-  Średni czas nasłonecznienia
 ---
 
 ## Technologie
