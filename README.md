@@ -17,7 +17,7 @@ This project is an ASP.NET Core API application designed to generate a 7-day wea
 
 ---
 
-## Technologies
+## Technologies and librays
 - **.NET 8**
 - **ASP.NET Core** (Web API)
 - **Docker and Docker Compose**
