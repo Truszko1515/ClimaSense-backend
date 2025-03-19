@@ -1,7 +1,7 @@
-# Spyrosoft Weather Forecast API
+# ClimaSense API
 
 # Project Description
-This project is an ASP.NET Core API application designed to generate a 7-day weather forecast and estimate the energy produced by photovoltaic installations.
+This project is an ASP.NET Core API application designed to generate a 7-day weather forecast and estimate the energy produced by photovoltaic installations, by default based on the user's current location, or by selecting a point on the map or providing coordinates.
 
 ---
 
